@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Music</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <h1>My Music</h1>
+    <div class="music-container">
+        {% for music in music_list %}
+        <div class="music-card">
+            <img src="{{ music.image }}" alt="album" class="album-art">
+            <strong>{{ music.title }}</strong><br>
+            {{ music.artist }}<br>
+
+            <audio id="audio-{{ loop.index }}" src="{{ music.url }}"></audio>
+
+            <div class="time-info">
+                <span class="current-time" id="current-{{ loop.index }}">0:00</span>
+                <div class="progress-bar-container" onclick="seekAudio(event, {{ loop.index }})">
+                    <div class="progress-bar" id="progress-{{ loop.index }}"></div>
+                </div>
+                <span class="duration" id="duration-{{ loop.index }}">0:00</span>
+            </div>
+
+            <button onclick="playAudio({{ loop.index }})">Play</button>
+            <button onclick="pauseAudio({{ loop.index }})">Pause</button>
+        </div>
+        {% endfor %}
+    </div>
+    <script src="/static/script.js"></script>
+</body>
+</html>
