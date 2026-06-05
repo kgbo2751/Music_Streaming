@@ -1,3 +1,5 @@
+<img width="1919" height="1032" alt="구조" src="https://github.com/user-attachments/assets/1b15e81c-dfeb-431b-9fae-3fde99a4eb61" /><br><br>
+
 Web<br>
 <img width="1919" height="565" alt="웹페이지" src="https://github.com/user-attachments/assets/813212b7-eb13-4b67-a3d8-c415fc242c95" /><br><br>
 
